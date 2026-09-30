@@ -1,0 +1,26 @@
+APPLICATION BOFO UNHCR RESTAURANT — GITHUB PAGES
+
+Contenu à déposer à la racine du dépôt GitHub :
+- index.html
+- manifest.json
+- sw.js
+- config.js
+- menu.csv
+- icon.svg
+- icon-192.png
+- icon-512.png
+
+Dans GitHub : Settings > Pages > Deploy from a branch > main > /(root) > Save.
+
+Le formulaire comprend le menu, le calcul du total, la livraison aux bureaux de l’UNHCR à Bastos, l’étage et le bureau. Le numéro de Pama est facultatif. La commande est préparée pour WhatsApp au +33 6 87 08 17 24.
+
+MISE À JOUR AUTOMATIQUE DEPUIS GOOGLE SHEETS
+1. Importez BOFO_Menu_Quotidien.xlsx dans Google Sheets.
+2. Dans Google Sheets : Fichier > Partager > Publier sur le Web.
+3. Choisissez seulement l’onglet Menu, puis le format « Valeurs séparées par des virgules (.csv) ».
+4. Copiez le lien fourni par Google.
+5. Ouvrez config.js et collez ce lien entre les guillemets de BOFO_MENU_CSV_URL.
+6. Replacez config.js dans GitHub. Ensuite, toute modification du tableau publié mettra automatiquement le menu à jour. L’application affiche uniquement les lignes portant la date du jour et Disponible = Oui.
+
+Installation Android : ouvrir le lien dans Chrome puis choisir « Installer l’application ».
+Installation iPhone : ouvrir le lien dans Safari, toucher Partager puis « Sur l’écran d’accueil ».
