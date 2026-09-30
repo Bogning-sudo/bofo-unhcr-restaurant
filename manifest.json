@@ -1,0 +1,13 @@
+{
+  "name": "BOFO UHCR Restaurant",
+  "short_name": "BOFO UHCR",
+  "description": "Menu et commande du restaurant BOFO UHCR",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#fffaf0",
+  "theme_color": "#176b45",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

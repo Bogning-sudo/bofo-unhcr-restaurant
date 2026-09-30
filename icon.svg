@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="110" fill="#176b45"/>
+  <circle cx="256" cy="256" r="170" fill="#fffaf0"/>
+  <circle cx="256" cy="256" r="125" fill="none" stroke="#f3b61f" stroke-width="18"/>
+  <text x="256" y="238" text-anchor="middle" font-family="Arial, sans-serif" font-size="82" font-weight="700" fill="#176b45">BOFO</text>
+  <text x="256" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#176b45">UHCR</text>
+</svg>
