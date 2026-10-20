@@ -37,7 +37,7 @@
     button { width:100%; padding:15px; border:0; border-radius:11px; color:white; background:#25D366; font-size:1.05rem; font-weight:bold; cursor:pointer; }
     button:hover { filter:brightness(.95); }
     .copy { margin-top:9px; color:var(--green); background:#e9f6ef; border:1px solid #b9dfca; }
-    .install { display:block; margin:14px auto 0; max-width:320px; color:#173f2e; background:var(--gold); }
+    .install { display:none; margin:14px auto 0; max-width:320px; color:#173f2e; background:var(--gold); }
     .note { color:var(--muted); font-size:.82rem; text-align:center; margin:9px 0 0; }
     .error { color:#a01818; font-weight:bold; margin:0 0 10px; }
     .menu-date { margin:10px 0 0; font-size:.9rem; opacity:.9; }
@@ -188,15 +188,49 @@
       window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
     }
     let installPrompt;
+    const installButton = document.getElementById("installApp");
+    const standaloneQuery = window.matchMedia("(display-mode: standalone)");
+
+    function appIsInstalled() {
+      return standaloneQuery.matches ||
+        window.navigator.standalone === true ||
+        localStorage.getItem("bofoAppInstalled") === "yes";
+    }
+
+    function updateInstallButton() {
+      if (standaloneQuery.matches || window.navigator.standalone === true) {
+        localStorage.setItem("bofoAppInstalled", "yes");
+      }
+      installButton.style.display = appIsInstalled() ? "none" : "block";
+    }
+
+    updateInstallButton();
+
+    if (standaloneQuery.addEventListener) {
+      standaloneQuery.addEventListener("change", updateInstallButton);
+    }
+
     window.addEventListener("beforeinstallprompt", event => {
       event.preventDefault();
       installPrompt = event;
+      updateInstallButton();
     });
-    document.getElementById("installApp").addEventListener("click", async () => {
+
+    window.addEventListener("appinstalled", () => {
+      localStorage.setItem("bofoAppInstalled", "yes");
+      installPrompt = null;
+      updateInstallButton();
+    });
+
+    installButton.addEventListener("click", async () => {
       if (installPrompt) {
         installPrompt.prompt();
-        await installPrompt.userChoice;
+        const choice = await installPrompt.userChoice;
+        if (choice.outcome === "accepted") {
+          localStorage.setItem("bofoAppInstalled", "yes");
+        }
         installPrompt = null;
+        updateInstallButton();
         return;
       }
       const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
