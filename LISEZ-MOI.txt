@@ -12,7 +12,7 @@ Contenu à déposer à la racine du dépôt GitHub :
 
 Dans GitHub : Settings > Pages > Deploy from a branch > main > /(root) > Save.
 
-Le formulaire comprend le menu, le calcul du total, la livraison aux bureaux de l’UNHCR à Bastos, l’étage et le bureau. Le numéro de Pama est facultatif. La commande est préparée pour WhatsApp au +33 6 87 08 17 24.
+Le formulaire comprend le menu, le calcul du total, la livraison aux bureaux de l’UNHCR à Bastos, l’étage et le bureau. Le numéro de Pama est facultatif. La commande est préparée pour WhatsApp au +237 658 727 116.
 
 MISE À JOUR AUTOMATIQUE DEPUIS GOOGLE SHEETS
 1. Importez BOFO_Menu_Quotidien.xlsx dans Google Sheets.
