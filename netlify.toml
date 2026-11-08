@@ -1,0 +1,7 @@
+[functions]
+  directory = "netlify/functions"
+
+[[headers]]
+  for = "/.netlify/functions/menu"
+  [headers.values]
+    Cache-Control = "public, max-age=60, s-maxage=300"

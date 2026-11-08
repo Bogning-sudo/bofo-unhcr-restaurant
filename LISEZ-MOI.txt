@@ -1,6 +1,10 @@
-APPLICATION BOFO UNHCR RESTAURANT — GITHUB PAGES
+APPLICATION BOFO UNHCR RESTAURANT — NETLIFY CAMEROUN
 
-Contenu à déposer à la racine du dépôt GitHub :
+Déposez le dossier complet dans un dépôt GitHub connecté à Netlify. Les fichiers
+netlify.toml et netlify/functions/menu.mjs permettent à Netlify de récupérer le
+menu Google Sheets sans que le téléphone se connecte directement à Google.
+
+Contenu à déposer à la racine du dépôt :
 - index.html
 - manifest.json
 - sw.js
@@ -9,6 +13,8 @@ Contenu à déposer à la racine du dépôt GitHub :
 - icon.svg
 - icon-192.png
 - icon-512.png
+- netlify.toml
+- dossier netlify/functions
 
 Dans GitHub : Settings > Pages > Deploy from a branch > main > /(root) > Save.
 
@@ -19,8 +25,8 @@ MISE À JOUR AUTOMATIQUE DEPUIS GOOGLE SHEETS
 2. Dans Google Sheets : Fichier > Partager > Publier sur le Web.
 3. Choisissez seulement l’onglet Menu, puis le format « Valeurs séparées par des virgules (.csv) ».
 4. Copiez le lien fourni par Google.
-5. Ouvrez config.js et collez ce lien entre les guillemets de BOFO_MENU_CSV_URL.
-6. Replacez config.js dans GitHub. Ensuite, toute modification du tableau publié mettra automatiquement le menu à jour. L’application affiche uniquement les lignes portant la date du jour et Disponible = Oui.
+5. Le lien Google Sheets est déjà configuré dans netlify/functions/menu.mjs.
+6. Toute modification du tableau publié mettra automatiquement le menu à jour. L’application affiche uniquement les lignes portant la date du jour et Disponible = Oui.
 
 Installation Android : ouvrir le lien dans Chrome puis choisir « Installer l’application ».
 Installation iPhone : ouvrir le lien dans Safari, toucher Partager puis « Sur l’écran d’accueil ».
