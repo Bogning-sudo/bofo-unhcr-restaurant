@@ -1,36 +1,64 @@
 Date,Categorie,Nom,Description,Prix_FCFA,Disponible,Ordre
-2026-09-30,Plats,Ndolé royal,"Ndolé, viande, crevettes et plantain mûr",3500,Oui,1
-2026-09-30,Plats,Poulet DG,"Poulet, plantain mûr et légumes sautés",4500,Oui,2
-2026-09-30,Boissons,Eau minérale 50 cl,Bouteille fraîche,500,Oui,10
-2026-09-30,Boissons,Jus de bissap,"Fabrication maison, 33 cl",1000,Oui,11
-2026-09-30,Boissons,Jus de gingembre,"Fabrication maison, 33 cl",1000,Oui,12
-2026-10-01,Plats,Poulet DG,"Poulet, plantain mûr et légumes sautés",4500,Oui,2
-2026-10-01,Plats,Poisson braisé,"Poisson entier, miondo et sauce piment",5000,Oui,3
-2026-10-01,Boissons,Eau minérale 50 cl,Bouteille fraîche,500,Oui,10
-2026-10-01,Boissons,Jus de bissap,"Fabrication maison, 33 cl",1000,Oui,11
-2026-10-01,Boissons,Jus de gingembre,"Fabrication maison, 33 cl",1000,Oui,12
-2026-10-02,Plats,Ndolé royal,"Ndolé, viande, crevettes et plantain mûr",3500,Oui,1
-2026-10-02,Plats,Poisson braisé,"Poisson entier, miondo et sauce piment",5000,Oui,3
-2026-10-02,Boissons,Eau minérale 50 cl,Bouteille fraîche,500,Oui,10
-2026-10-02,Boissons,Jus de bissap,"Fabrication maison, 33 cl",1000,Oui,11
-2026-10-02,Boissons,Jus de gingembre,"Fabrication maison, 33 cl",1000,Oui,12
-2026-10-03,Plats,Ndolé royal,"Ndolé, viande, crevettes et plantain mûr",3500,Oui,1
-2026-10-03,Plats,Poulet DG,"Poulet, plantain mûr et légumes sautés",4500,Oui,2
-2026-10-03,Boissons,Eau minérale 50 cl,Bouteille fraîche,500,Oui,10
-2026-10-03,Boissons,Jus de bissap,"Fabrication maison, 33 cl",1000,Oui,11
-2026-10-03,Boissons,Jus de gingembre,"Fabrication maison, 33 cl",1000,Oui,12
-2026-10-04,Plats,Poulet DG,"Poulet, plantain mûr et légumes sautés",4500,Oui,2
-2026-10-04,Plats,Poisson braisé,"Poisson entier, miondo et sauce piment",5000,Oui,3
-2026-10-04,Boissons,Eau minérale 50 cl,Bouteille fraîche,500,Oui,10
-2026-10-04,Boissons,Jus de bissap,"Fabrication maison, 33 cl",1000,Oui,11
-2026-10-04,Boissons,Jus de gingembre,"Fabrication maison, 33 cl",1000,Oui,12
-2026-10-05,Plats,Ndolé royal,"Ndolé, viande, crevettes et plantain mûr",3500,Oui,1
-2026-10-05,Plats,Poisson braisé,"Poisson entier, miondo et sauce piment",5000,Oui,3
-2026-10-05,Boissons,Eau minérale 50 cl,Bouteille fraîche,500,Oui,10
-2026-10-05,Boissons,Jus de bissap,"Fabrication maison, 33 cl",1000,Oui,11
-2026-10-05,Boissons,Jus de gingembre,"Fabrication maison, 33 cl",1000,Oui,12
-2026-10-06,Plats,Ndolé royal,"Ndolé, viande, crevettes et plantain mûr",3500,Oui,1
-2026-10-06,Plats,Poulet DG,"Poulet, plantain mûr et légumes sautés",4500,Oui,2
-2026-10-06,Boissons,Eau minérale 50 cl,Bouteille fraîche,500,Oui,10
-2026-10-06,Boissons,Jus de bissap,"Fabrication maison, 33 cl",1000,Oui,11
-2026-10-06,Boissons,Jus de gingembre,"Fabrication maison, 33 cl",1000,Oui,12
+30/9/2026,Plats,poulet roti,"poulet frit et legumes ( tomates, carottes oignons)",2 500,Oui,1
+30/9/2026,Plats,Poisson braisé,"Poisson entier, miondo et sauce piment",5 000,Oui,2
+30/9/2026,Plats,Riz sauce tomate au poulet,"Riz parfumé, légumes,tomate et poulet",3 500,Oui,3
+30/9/2026,Plats,Koki et plantain,Gâteau de haricots et plantain,3 000,Oui,4
+30/9/2026,Plats,Poulet DG,"Poulet, plantain mûr et légumes sautés",4 500,Oui,5
+30/9/2026,Boissons,Eau minérale 50 cl,Bouteille fraîche,500,Oui,10
+30/9/2026,Boissons,Jus de bissap,"Fabrication maison, 33 cl",1 000,Oui,11
+30/9/2026,Boissons,Coca-Cola / Fanta / Spite,"Bouteille fraîche, 33 cl",800,Oui,9
+30/9/2026,Boissons,Malta Guinness,Bouteille fraîche,1 000,Oui,8
+30/9/2026,Boissons,Jus de gingembre,"Fabrication maison, 33 cl",1 000,Oui,12
+1/10/2026,Plats,Poulet DG,"Poulet, plantain mûr et légumes sautés",4 500,Oui,2
+1/10/2026,Plats,Poisson braisé,"Poisson entier, miondo et sauce piment",5 000,Oui,3
+1/10/2026,Plats,Ndolé royal,"Ndolé, viande, crevettes et plantain mûr",3 500,Oui,4
+1/10/2026,Plats,Riz sauce tomate au poulet,"Riz parfumé, légumes,tomate et poulet",3 500,Oui,5
+1/10/2026,Plats,Koki et plantain,Gâteau de haricots et plantain,3 000,Oui,6
+1/10/2026,Boissons,Eau minérale 50 cl,Bouteille fraîche,500,Oui,10
+1/10/2026,Boissons,Jus de bissap,"Fabrication maison, 33 cl",1 000,Oui,11
+1/10/2026,Boissons,Jus de gingembre,"Fabrication maison, 33 cl",1 000,Oui,12
+2/10/2026,Plats,poulet roti,"Ndolé, viande, crevettes et plantain mûr",3 500,Oui,1
+2/10/2026,Plats,Eru et water fufu,"Feuille d'eru, waterleaf et accompagnement",3 000,Oui,2
+2/10/2026,Plats,Riz cantonais,"Riz, légumes et lardons",2 500,Oui,4
+2/10/2026,Plats,Poisson braisé,"Poisson entier, miondo et sauce piment",3 500,Oui,3
+2/10/2026,Boissons,Eau minérale 50 cl,Bouteille fraîche,500,Oui,10
+2/10/2026,Boissons,Jus de bissap,"Fabrication maison, 33 cl",1 000,Oui,11
+2/10/2026,Boissons,Jus de gingembre,"Fabrication maison, 33 cl",1 000,Oui,12
+3/10/2026,Plats,Ndolé royal,"Ndolé, viande, crevettes et plantain mûr",3 500,Oui,1
+3/10/2026,Plats,Poulet DG,"Poulet, plantain mûr et légumes sautés",4 500,Oui,2
+3/10/2026,Boissons,Eau minérale 50 cl,Bouteille fraîche,500,Oui,10
+3/10/2026,Boissons,Jus de bissap,"Fabrication maison, 33 cl",1 000,Oui,11
+3/10/2026,Boissons,Jus de gingembre,"Fabrication maison, 33 cl",1 000,Oui,12
+4/10/2026,Plats,Poulet DG,"Poulet, plantain mûr et légumes sautés",4 500,Oui,2
+4/10/2026,Plats,Poisson braisé,"Poisson entier, miondo et sauce piment",5 000,Oui,3
+4/10/2026,Boissons,Eau minérale 50 cl,Bouteille fraîche,500,Oui,10
+4/10/2026,Boissons,Jus de bissap,"Fabrication maison, 33 cl",1 000,Oui,11
+4/10/2026,Boissons,Jus de gingembre,"Fabrication maison, 33 cl",1 000,Oui,12
+5/10/2026,Plats,Ndolé royal,"Ndolé, viande, crevettes et plantain mûr",3 500,Oui,1
+5/10/2026,Plats,Poisson braisé,"Poisson entier, miondo et sauce piment",5 000,Oui,3
+5/10/2026,Boissons,Eau minérale 50 cl,Bouteille fraîche,500,Oui,10
+5/10/2026,Boissons,Jus de bissap,"Fabrication maison, 33 cl",1 000,Oui,11
+5/10/2026,Boissons,Jus de gingembre,"Fabrication maison, 33 cl",1 000,Oui,12
+6/10/2026,Plats,Ndolé royal,"Ndolé, viande, crevettes et plantain mûr",3 500,Oui,1
+6/10/2026,Plats,Poulet DG,"Poulet, plantain mûr et légumes sautés",4 500,Oui,2
+6/10/2026,Boissons,Eau minérale 50 cl,Bouteille fraîche,500,Oui,10
+6/10/2026,Boissons,Jus de bissap,"Fabrication maison, 33 cl",1 000,Oui,11
+6/10/2026,Boissons,Jus de gingembre,"Fabrication maison, 33 cl",1 000,Oui,12
+8/11/2026,Plats,1/4 de Poulet sauce basquaise,"Poulet, Légumes ( poivrons vert et rouge, tomates, oignons et ails",2 500,Oui,1
+8/11/2026,Plats,Porc rôti,Porc assaisonné et frit ,2 500,Oui,2
+8/11/2026,Plats,Ndole Viande,"Ndolè , viande et crevettes ",2 500,Oui,3
+8/11/2026,Boissons,Jus de gingembre,"Fabrication maison, 33 cl",500,Oui,4
+8/11/2026,Boissons,Jus de bissap,"Fabrication maison, 33 cl",500,Oui,5
+8/11/2026,Boissons,Coca-Cola / Fanta / Spite,"Bouteille fraîche, 33 cl",500,Oui,6
+9/11/2026,,,,,,
+9/11/2026,,,,,,
+16/11/2026,,,,,,
+17/11/2026,,,,,,
+18/11/2026,,,,,,
+19/11/2026,,,,,,
+20/11/2026,,,,,,
+21/11/2026,,,,,,
+22/11/2026,,,,,,
+23/11/2026,,,,,,
+24/11/2026,,,,,,
+25/11/2026,,,,,,
