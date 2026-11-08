@@ -130,21 +130,11 @@
     async function loadDailyMenu() {
       const parts = Object.fromEntries(new Intl.DateTimeFormat("fr-FR", {timeZone:"Africa/Douala", year:"numeric", month:"2-digit", day:"2-digit"}).formatToParts(new Date()).map(p => [p.type,p.value]));
       const today = `${parts.year}-${parts.month}-${parts.day}`;
-      const sources = [...new Set([window.BOFO_MENU_CSV_URL, "menu.csv"].filter(Boolean))];
+      const source = window.BOFO_MENU_CSV_URL || "menu.csv";
       try {
-        let csv = "";
-        for (const source of sources) {
-          try {
-            const response = await fetch(source + (source.includes("?") ? "&" : "?") + "v=" + Date.now(), {cache:"no-store"});
-            if (!response.ok) throw new Error("Menu inaccessible");
-            csv = await response.text();
-            if (csv.trim()) break;
-          } catch (error) {
-            csv = "";
-          }
-        }
-        if (!csv) throw new Error("Menu inaccessible");
-        products = parseCSV(csv)
+        const response = await fetch(source + (source.includes("?") ? "&" : "?") + "v=" + Date.now(), {cache:"no-store"});
+        if (!response.ok) throw new Error("Menu inaccessible");
+        products = parseCSV(await response.text())
           .filter(r => normalizeDate(r.Date) === today && String(r.Disponible).toLowerCase() !== "non")
           .sort((a,b) => (+a.Ordre || 999) - (+b.Ordre || 999))
           .map(r => ({cat: String(r.Categorie).toLowerCase().startsWith("boisson") ? "drinks" : "foods", name:r.Nom, desc:r.Description, price:Number(String(r.Prix_FCFA).replace(/[^0-9.-]/g,"")) || 0}));
