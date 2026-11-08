@@ -46,19 +46,25 @@ Date,Categorie,Nom,Description,Prix_FCFA,Disponible,Ordre
 6/10/2026,Boissons,Jus de gingembre,"Fabrication maison, 33 cl",1 000,Oui,12
 8/11/2026,Plats,1/4 de Poulet sauce basquaise,"Poulet, Légumes ( poivrons vert et rouge, tomates, oignons et ails",2 500,Oui,1
 8/11/2026,Plats,Porc rôti,Porc assaisonné et frit ,2 500,Oui,2
-8/11/2026,Accompagnemnts,Ndole Viande,"Ndolè , viande et crevettes ",2 500,Oui,3
+8/11/2026,Accompagnements,Ndole Viande,"Ndolè , viande et crevettes ",2 500,Oui,3
 8/11/2026,Boissons,Jus de gingembre,"Fabrication maison, 33 cl",500,Oui,4
 8/11/2026,Boissons,Jus de bissap,"Fabrication maison, 33 cl",500,Oui,5
 8/11/2026,Boissons,Coca-Cola / Fanta / Spite,"Bouteille fraîche, 33 cl",500,Oui,6
 9/11/2026,Plats,1/4 de Poulet sauce basquaise + Accompagnement au choix,"Poulet, Légumes ( poivrons vert et rouge, tomates, oignons et ails",2 500,Oui,1
 9/11/2026,Plats,Porc Grillé + Accompagnement au choix,Porc assaisonné et grillé ,2 500,Oui,2
 9/11/2026,Plats,Poisson grillé + Accompagnement au choix,Poisson assaisonné et poêlé ,3 000,Oui,3
-9/11/2026,Plats,Poisson grillé + Accompagnement au choix,Gros Poisson assaisonné et poêlé ,3 500,Oui,
+9/11/2026,Plats,Poisson grillé + Accompagnement au choix,Gros Poisson assaisonné et poêlé ,3 500,Oui,4
+9/11/2026,Accompagnements,Riz vapeus ,,0,Oui,5
+9/11/2026,Accompagnements,Plantains Frits,,0,Oui,6
+9/11/2026,Accompagnements,Plantains Vapeur,,0,Oui,7
+9/11/2026,Accompagnements,Bâtons de manioc,,0,Oui,8
+9/11/2026,Accompagnements,Pommes de terre Frits ,,0,Oui,9
+9/11/2026,Boissons,,,,Oui,
 9/11/2026,Boissons,,,,,
 9/11/2026,Boissons,,,,,
+9/11/2026,Boissons,,,,,
+9/11/2026,Boissons,,,,,
+9/11/2026,Boissons,,,,,
 9/11/2026,,,,,,
 9/11/2026,,,,,,
-9/11/2026,,,,,,
-23/11/2026,,,,,,
-24/11/2026,,,,,,
-25/11/2026,,,,,,
+18/11/2026,,,,,,
