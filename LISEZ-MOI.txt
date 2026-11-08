@@ -1,6 +1,10 @@
-APPLICATION BOFO UNHCR RESTAURANT — GITHUB PAGES
+APPLICATION BOFO UNHCR RESTAURANT — NETLIFY CAMEROUN
 
-Contenu à déposer à la racine du dépôt GitHub :
+Déposez le dossier complet dans un dépôt GitHub connecté à Netlify. Les fichiers
+netlify.toml et netlify/functions/menu.mjs permettent à Netlify de récupérer le
+menu Google Sheets sans que le téléphone se connecte directement à Google.
+
+Contenu à déposer à la racine du dépôt :
 - index.html
 - manifest.json
 - sw.js
@@ -9,18 +13,21 @@ Contenu à déposer à la racine du dépôt GitHub :
 - icon.svg
 - icon-192.png
 - icon-512.png
+- netlify.toml
+- dossier netlify/functions
 
 Dans GitHub : Settings > Pages > Deploy from a branch > main > /(root) > Save.
 
 Le formulaire comprend le menu, le calcul du total, la livraison aux bureaux de l’UNHCR à Bastos, l’étage et le bureau. Le numéro de Pama est facultatif. La commande est préparée pour WhatsApp au +237 658 727 116.
 
-MISE À JOUR AUTOMATIQUE DEPUIS GOOGLE SHEETS
+MISE À JOUR AUTOMATIQUE DEPUIS GOOGLE SHEETS AU CAMEROUN
 1. Importez BOFO_Menu_Quotidien.xlsx dans Google Sheets.
 2. Dans Google Sheets : Fichier > Partager > Publier sur le Web.
 3. Choisissez seulement l’onglet Menu, puis le format « Valeurs séparées par des virgules (.csv) ».
 4. Copiez le lien fourni par Google.
-5. Ouvrez config.js et collez ce lien entre les guillemets de BOFO_MENU_CSV_URL.
-6. Replacez config.js dans GitHub. Ensuite, toute modification du tableau publié mettra automatiquement le menu à jour. L’application affiche uniquement les lignes portant la date du jour et Disponible = Oui.
+5. Le fichier .github/workflows/actualiser-menu.yml récupère automatiquement le tableau toutes les 15 minutes.
+6. Dans GitHub, ouvrez Actions > Actualiser le menu BOFO > Run workflow pour lancer la première actualisation immédiatement.
+7. Netlify republiera ensuite automatiquement le fichier menu.csv. Le téléphone charge le menu depuis Netlify et ne contacte plus Google Sheets.
 
 Installation Android : ouvrir le lien dans Chrome puis choisir « Installer l’application ».
 Installation iPhone : ouvrir le lien dans Safari, toucher Partager puis « Sur l’écran d’accueil ».
