@@ -29,5 +29,9 @@ MISE À JOUR AUTOMATIQUE DEPUIS GOOGLE SHEETS AU CAMEROUN
 6. Dans GitHub, ouvrez Actions > Actualiser le menu BOFO > Run workflow pour lancer la première actualisation immédiatement.
 7. Netlify republiera ensuite automatiquement le fichier menu.csv. Le téléphone charge le menu depuis Netlify et ne contacte plus Google Sheets.
 
+CATEGORIES DU TABLEAU
+Dans la colonne Categorie, utilisez Plats, Accompagnements ou Boissons. Les articles
+seront automatiquement rangés dans les trois sections correspondantes de l'application.
+
 Installation Android : ouvrir le lien dans Chrome puis choisir « Installer l’application ».
 Installation iPhone : ouvrir le lien dans Safari, toucher Partager puis « Sur l’écran d’accueil ».

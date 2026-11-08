@@ -58,6 +58,11 @@
       </section>
 
       <section>
+        <h2>🍚 Accompagnements</h2>
+        <div id="sides"></div>
+      </section>
+
+      <section>
         <h2>🥤 Boissons</h2>
         <div id="drinks"></div>
       </section>
@@ -93,6 +98,7 @@
     const money = n => new Intl.NumberFormat("fr-FR").format(n) + " FCFA";
     function renderProducts() {
       document.getElementById("foods").innerHTML = "";
+      document.getElementById("sides").innerHTML = "";
       document.getElementById("drinks").innerHTML = "";
       products.forEach((p,i) => document.getElementById(p.cat).insertAdjacentHTML("beforeend", `
         <div class="item">
@@ -147,7 +153,13 @@
         products = parseCSV(csv)
           .filter(r => normalizeDate(r.Date) === today && String(r.Disponible).toLowerCase() !== "non")
           .sort((a,b) => (+a.Ordre || 999) - (+b.Ordre || 999))
-          .map(r => ({cat: String(r.Categorie).toLowerCase().startsWith("boisson") ? "drinks" : "foods", name:r.Nom, desc:r.Description, price:Number(String(r.Prix_FCFA).replace(/[^0-9.-]/g,"")) || 0}));
+          .map(r => {
+            const category = String(r.Categorie).trim().toLowerCase();
+            const cat = category.startsWith("boisson") ? "drinks"
+              : category.startsWith("accompagnement") ? "sides"
+              : "foods";
+            return {cat, name:r.Nom, desc:r.Description, price:Number(String(r.Prix_FCFA).replace(/[^0-9.-]/g,"")) || 0};
+          });
         renderProducts();
         const dateLabel = new Intl.DateTimeFormat("fr-FR", {timeZone:"Africa/Douala", dateStyle:"long"}).format(new Date());
         document.getElementById("menuDate").textContent = products.length ? `Menu du ${dateLabel}` : `Aucun article disponible pour le ${dateLabel}`;
