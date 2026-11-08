@@ -59,12 +59,19 @@ Date,Categorie,Nom,Description,Prix_FCFA,Disponible,Ordre
 9/11/2026,Accompagnements,Plantains Vapeur,,0,Oui,7
 9/11/2026,Accompagnements,Bâtons de manioc,,0,Oui,8
 9/11/2026,Accompagnements,Pommes de terre Frits ,,0,Oui,9
-9/11/2026,Boissons,,,,Oui,
-9/11/2026,Boissons,,,,,
-9/11/2026,Boissons,,,,,
-9/11/2026,Boissons,,,,,
-9/11/2026,Boissons,,,,,
-9/11/2026,Boissons,,,,,
-9/11/2026,,,,,,
-9/11/2026,,,,,,
-18/11/2026,,,,,,
+9/11/2026,Boissons,Jus detox ,"Concombre,Percil, Citron, Gingembre ",1 000,Oui,10
+9/11/2026,Boissons,Jus Gingembre,,500,Oui,11
+9/11/2026,Boissons,Jus Cocktail ,,500,Oui,12
+9/11/2026,Boissons,Jus Papaye Citron,,500,Oui,13
+9/11/2026,Boissons,Jus Goyage ,"Goyage, Beterave",1 000,Oui,14
+9/11/2026,Boissons,Jus Corossol,,1 000,Oui,15
+9/11/2026,Boissons,Jus d'ananas ,"Ananas, Gingembre",500,Oui,16
+9/11/2026,Boissons,Jus Citron ,,500,Oui,17
+9/11/2026,Boissons,Jus Cassimango,,500,Oui,18
+9/11/2026,Boissons,Jus Beterave,,1 000,Oui,19
+9/11/2026,Boissons,Jus Foléré ,,500,Oui,20
+9/11/2026,Boissons,Jus Baobab,,1 000,Oui,21
+9/11/2026,Boissons,Boissons gazeuse au choix,"Planète Cocktails\ grenadine\ lemon\fruits sauvage, fanta , Coca-Cola",500,Oui,22
+23/11/2026,,,,,,
+24/11/2026,,,,,,
+25/11/2026,,,,,,
