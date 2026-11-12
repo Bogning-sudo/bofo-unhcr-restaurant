@@ -34,12 +34,14 @@ jobs:
       - name: Publier le menu actualisé
         shell: bash
         run: |
-     if git diff --quiet -- menu.csv menu.txt; then
-            echo "Le menu est déjà à jour."
-            exit 0
-          fi
           git config user.name "BOFO Menu automatique"
           git config user.email "actions@users.noreply.github.com"
           git add menu.csv menu.txt
+
+          if git diff --cached --quiet; then
+            echo "Le menu est déjà à jour."
+            exit 0
+          fi
+
           git commit -m "Actualisation automatique du menu"
           git push
