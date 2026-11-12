@@ -29,16 +29,17 @@ jobs:
           test -s menu.csv.nouveau
           head -n 1 menu.csv.nouveau | grep -q "Date"
           mv menu.csv.nouveau menu.csv
+          cp menu.csv menu.txt
 
       - name: Publier le menu actualisé
         shell: bash
         run: |
-          if git diff --quiet -- menu.csv; then
+     if git diff --quiet -- menu.csv menu.txt; then
             echo "Le menu est déjà à jour."
             exit 0
           fi
           git config user.name "BOFO Menu automatique"
           git config user.email "actions@users.noreply.github.com"
-          git add menu.csv
+          git add menu.csv menu.txt
           git commit -m "Actualisation automatique du menu"
           git push
