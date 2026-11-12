@@ -10,6 +10,7 @@ Contenu à déposer à la racine du dépôt :
 - sw.js
 - config.js
 - menu.csv
+- menu.txt
 - icon.svg
 - icon-192.png
 - icon-512.png
@@ -27,7 +28,7 @@ MISE À JOUR AUTOMATIQUE DEPUIS GOOGLE SHEETS AU CAMEROUN
 4. Copiez le lien fourni par Google.
 5. Le fichier .github/workflows/actualiser-menu.yml récupère automatiquement le tableau toutes les 15 minutes.
 6. Dans GitHub, ouvrez Actions > Actualiser le menu BOFO > Run workflow pour lancer la première actualisation immédiatement.
-7. Netlify republiera ensuite automatiquement le fichier menu.csv. Le téléphone charge le menu depuis Netlify et ne contacte plus Google Sheets.
+7. Netlify republiera ensuite automatiquement menu.csv et menu.txt. L'application charge menu.txt depuis Netlify et ne contacte plus Google Sheets.
 
 CATEGORIES DU TABLEAU
 Dans la colonne Categorie, utilisez Plats, Accompagnements ou Boissons. Les articles
