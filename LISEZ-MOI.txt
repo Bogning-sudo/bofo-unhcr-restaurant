@@ -31,8 +31,10 @@ MISE À JOUR AUTOMATIQUE DEPUIS GOOGLE SHEETS AU CAMEROUN
 7. Netlify republiera ensuite automatiquement menu.csv et menu.txt. L'application charge menu.txt depuis Netlify et ne contacte plus Google Sheets.
 
 CATEGORIES DU TABLEAU
-Dans la colonne Categorie, utilisez Plats, Accompagnements ou Boissons. Les articles
-seront automatiquement rangés dans les trois sections correspondantes de l'application.
+Dans la colonne Categorie, utilisez Plats, Accompagnements, Salades, Petit-déjeuner
+ou Boissons. Les articles seront automatiquement rangés dans les cinq sections.
+Lorsqu'un plat est sélectionné, le client peut choisir gratuitement un accompagnement
+parmi les articles de la catégorie Accompagnements.
 
 Installation Android : ouvrir le lien dans Chrome puis choisir « Installer l’application ».
 Installation iPhone : ouvrir le lien dans Safari, toucher Partager puis « Sur l’écran d’accueil ».

@@ -25,6 +25,9 @@
     .item strong { display:block; }
     .desc { display:block; color:var(--muted); font-size:.88rem; margin-top:3px; }
     .price { color:var(--green); font-weight:bold; }
+    .included-side { display:none; grid-column:1 / -1; padding:10px 12px; background:#f5faf7; border-radius:10px; }
+    .included-side label { display:block; color:var(--green); font-weight:bold; font-size:.9rem; }
+    .included-side select { width:100%; margin-top:6px; padding:10px; border:1px solid #b9dfca; border-radius:9px; background:white; font-size:16px; }
     input[type=number] { width:64px; padding:10px; border:1px solid #bbb; border-radius:9px; font-size:16px; }
     label.field { display:block; margin:12px 0; font-weight:bold; }
     label.field input, label.field textarea, label.field select { display:block; width:100%; margin-top:6px; padding:12px; border:1px solid #bbb; border-radius:9px; font-size:16px; background:white; }
@@ -60,6 +63,16 @@
       <section>
         <h2>🍚 Accompagnements</h2>
         <div id="sides"></div>
+      </section>
+
+      <section>
+        <h2>🥗 Salades</h2>
+        <div id="salads"></div>
+      </section>
+
+      <section>
+        <h2>☕ Petit-déjeuner</h2>
+        <div id="breakfast"></div>
       </section>
 
       <section>
@@ -99,13 +112,32 @@
     function renderProducts() {
       document.getElementById("foods").innerHTML = "";
       document.getElementById("sides").innerHTML = "";
+      document.getElementById("salads").innerHTML = "";
+      document.getElementById("breakfast").innerHTML = "";
       document.getElementById("drinks").innerHTML = "";
+      const includedSideOptions = products
+        .filter(p => p.cat === "sides")
+        .map(p => `<option value="${p.name.replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}">${p.name}</option>`)
+        .join("");
       products.forEach((p,i) => document.getElementById(p.cat).insertAdjacentHTML("beforeend", `
         <div class="item">
           <div><strong>${p.name}</strong><span class="desc">${p.desc}</span><span class="price">${money(p.price)}</span></div>
           <input class="qty" type="number" min="0" max="20" value="0" inputmode="numeric" aria-label="Quantité ${p.name}" data-index="${i}">
+          ${p.cat === "foods" ? `<div class="included-side" id="includedSide-${i}">
+            <label>Accompagnement compris dans le prix
+              <select class="included-side-select" data-index="${i}">
+                <option value="">Choisir un accompagnement</option>
+                <option value="Sans accompagnement">Sans accompagnement</option>
+                ${includedSideOptions}
+              </select>
+            </label>
+          </div>` : ""}
         </div>`));
-      document.querySelectorAll(".qty").forEach(el => el.addEventListener("input", updateTotal));
+      document.querySelectorAll(".qty").forEach(el => el.addEventListener("input", () => {
+        const includedSide = document.getElementById(`includedSide-${el.dataset.index}`);
+        if (includedSide) includedSide.style.display = (+el.value || 0) > 0 ? "block" : "none";
+        updateTotal();
+      }));
     }
 
     function parseCSV(text) {
@@ -136,7 +168,7 @@
     async function loadDailyMenu() {
       const parts = Object.fromEntries(new Intl.DateTimeFormat("fr-FR", {timeZone:"Africa/Douala", year:"numeric", month:"2-digit", day:"2-digit"}).formatToParts(new Date()).map(p => [p.type,p.value]));
       const today = `${parts.year}-${parts.month}-${parts.day}`;
-      const sources = [...new Set([window.BOFO_MENU_CSV_URL, "menu.csv"].filter(Boolean))];
+      const sources = [...new Set([window.BOFO_MENU_CSV_URL, "menu.txt", "menu.csv"].filter(Boolean))];
       try {
         let csv = "";
         for (const source of sources) {
@@ -154,9 +186,11 @@
           .filter(r => normalizeDate(r.Date) === today && String(r.Disponible).toLowerCase() !== "non")
           .sort((a,b) => (+a.Ordre || 999) - (+b.Ordre || 999))
           .map(r => {
-            const category = String(r.Categorie).trim().toLowerCase();
+            const category = String(r.Categorie).trim().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
             const cat = category.startsWith("boisson") ? "drinks"
               : category.startsWith("accompagnement") ? "sides"
+              : category.startsWith("salade") ? "salads"
+              : category.startsWith("petit-dejeuner") || category.startsWith("petit dejeuner") ? "breakfast"
               : "foods";
             return {cat, name:r.Nom, desc:r.Description, price:Number(String(r.Prix_FCFA).replace(/[^0-9.-]/g,"")) || 0};
           });
@@ -169,7 +203,11 @@
     }
 
     function selectedItems() {
-      return [...document.querySelectorAll(".qty")].map(el => ({...products[+el.dataset.index], qty:+el.value || 0})).filter(x => x.qty > 0);
+      return [...document.querySelectorAll(".qty")].map(el => {
+        const index = +el.dataset.index;
+        const sideSelect = document.querySelector(`.included-side-select[data-index="${index}"]`);
+        return {...products[index], qty:+el.value || 0, includedSide:sideSelect?.value || ""};
+      }).filter(x => x.qty > 0);
     }
     function updateTotal() {
       const total = selectedItems().reduce((sum,p) => sum + p.price*p.qty, 0);
@@ -183,7 +221,10 @@
       if (!document.getElementById("orderForm").reportValidity()) return null;
       error.textContent = "";
       const total = items.reduce((sum,p) => sum + p.price*p.qty, 0);
-      const lines = items.map(p => `• ${p.qty} × ${p.name} — ${money(p.qty*p.price)}`);
+      const lines = items.map(p => {
+        const base = `• ${p.qty} × ${p.name} — ${money(p.qty*p.price)}`;
+        return p.cat === "foods" && p.includedSide ? `${base}\n   ↳ Accompagnement inclus : ${p.includedSide}` : base;
+      });
       return `Bonjour, je souhaite passer cette commande :\n\n${lines.join("\n")}\n\n*Total estimé : ${money(total)}*\n\nNom : ${document.getElementById("customerName").value}\nNuméro de Pama : ${document.getElementById("customerPhone").value}\nLivraison : bureaux de l’UNHCR à Bastos\nÉtage : ${document.getElementById("floor").value}\nBureau : ${document.getElementById("office").value}\nHeure : ${document.getElementById("time").value}\nPaiement : ${document.getElementById("payment").value}\nInstructions : ${document.getElementById("notes").value || "Aucune"}\n\nMerci de confirmer la commande et le montant final.`;
     }
 

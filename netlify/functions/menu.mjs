@@ -3,6 +3,7 @@ const GOOGLE_SHEETS_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1v
 export default async () => {
   try {
     const response = await fetch(`${GOOGLE_SHEETS_CSV_URL}&v=${Date.now()}`, {
+      cache: "no-store",
       headers: { "User-Agent": "BOFO-UNHCR-Menu/1.0" }
     });
     if (!response.ok) throw new Error(`Google Sheets a répondu ${response.status}`);
@@ -11,7 +12,7 @@ export default async () => {
       status: 200,
       headers: {
         "Content-Type": "text/csv; charset=utf-8",
-        "Cache-Control": "public, max-age=60, s-maxage=300",
+        "Cache-Control": "no-store, no-cache, must-revalidate, max-age=0",
         "Access-Control-Allow-Origin": "*"
       }
     });

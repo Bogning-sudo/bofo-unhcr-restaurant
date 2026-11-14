@@ -1,4 +1,4 @@
-const CACHE = "bofo-unhcr-v10";
+const CACHE = "bofo-unhcr-v11";
 const FILES = ["./", "./index.html", "./manifest.json", "./config.js", "./menu.txt", "./menu.csv", "./icon.svg", "./icon-192.png", "./icon-512.png"];
 
 self.addEventListener("install", event => {
