@@ -1,3 +1,4 @@
+// BOFO version 12 - relais direct Google Sheets.
 const GOOGLE_SHEETS_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRzJwGQWmbA-33P2UH75q9AkdivnjcpkVg5lzIyIABPd4PZmusae0KGPBASQRAv5KoCbEM3mXkIi9_J/pub?gid=91339212&single=true&output=csv";
 
 export default async () => {
