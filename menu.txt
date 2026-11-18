@@ -98,34 +98,34 @@ Date,Categorie,Nom,Description,Prix_FCFA,Disponible,Ordre
 10/11/2026,Boissons,Jus Foléré ,,500,Oui,22
 10/11/2026,Boissons,Jus Baobab,,1 000,Oui,23
 10/11/2026,Boissons,Boissons gazeuses au choix,"Planète Cocktails\ grenadine\ lemon\fruits sauvages, fanta , Coca-Cola",500,Oui,24
-17/11/2026,Plats,1/4 de Poulet sauce basquaise + Accompagnement au choix,1/4 de Poulet sauce basquaise + Accompagnement au choix,2 500,Oui,1
-17/11/2026,Plats,Porc Grillé + Accompagnement au choix,Porc Grillé + Accompagnement au choix,2 500,Oui,2
-17/11/2026,Plats,Carpe Grillé + Accompagnement au choix,Carpe Grillé + Accompagnement au choix,3 000,Oui,3
-17/11/2026,Plats,Bar Grillé + Acoompagnements,Bar Grillé + Acoompagnements,3 500,Oui,4
-17/11/2026,Plats,Poisson grillé + Accompagnement au choix,Poisson grillé + Accompagnement au choix,3 500,Oui,5
-17/11/2026,Plats,Emincé bœuf + Accompagnement au choix ,Emincé bœuf + Accompagnement au choix ,2 000,Oui,6
-17/11/2026,Accompagnements,Riz vapeus ,,0,Oui,7
-17/11/2026,Accompagnements,Plantains Frits,,0,Oui,8
-17/11/2026,Accompagnements,Plantains Vapeur,,0,Oui,9
-17/11/2026,Accompagnements,Bâtons de manioc,,0,Oui,10
-17/11/2026,Accompagnements,Pommes de terre Frits ,,0,Oui,11
-17/11/2026,Boissons,Jus detox ,,1 000,Oui,12
-17/11/2026,Boissons,Jus Gingembre,,500,Oui,13
-17/11/2026,Boissons,Jus Cocktail ,,500,Oui,14
-17/11/2026,Boissons,Jus Papaye Citron,,500,Oui,15
-17/11/2026,Boissons,Jus Goyage ,,1 000,Oui,16
-17/11/2026,Boissons,Jus Corossol,,1 000,Oui,17
-17/11/2026,Boissons,Jus d'ananas ,,500,Oui,18
-17/11/2026,Boissons,Jus Citron ,,500,Oui,19
-17/11/2026,Boissons,Jus Cassimango,,500,Oui,20
-17/11/2026,Boissons,Jus Beterave,,1 000,Oui,21
-17/11/2026,Boissons,Jus Foléré ,,500,Oui,22
-17/11/2026,Boissons,Jus Baobab,,1 000,Oui,23
-17/11/2026,Boissons,Boissons gazeuses au choix,,500,Oui,24
-17/11/2026,Petit-déjeuner,Croques Monsieur ,,1 000,Oui,25
-17/11/2026,Petit-déjeuner,Gaufres au chocolat,,1 000,Oui,26
-17/11/2026,Petit-déjeuner,Gaufres au sucre glacé,,1 000,Oui,27
-17/11/2026,Petit-déjeuner,Omelette garnie,Saedine plus pattes au choix ,1 000,Oui,28
-17/11/2026,Salades,Salade de crudité classique ,,1 500,Oui,29
-17/11/2026,Salades,Salade du chef sans fromage ,,2 000,Oui,30
-17/11/2026,Salades,Salade du chef avec fromage ,,2 500,Oui,31
+18/11/2026,Plats,1/4 de Poulet sauce basquaise + Accompagnement au choix,1/4 de Poulet sauce basquaise + Accompagnement au choix,2 500,Oui,1
+18/11/2026,Plats,Porc Grillé + Accompagnement au choix,Porc Grillé + Accompagnement au choix,2 500,Oui,2
+18/11/2026,Plats,Carpe Grillé + Accompagnement au choix,Carpe Grillé + Accompagnement au choix,3 000,Oui,3
+18/11/2026,Plats,Bar Grillé + Acoompagnements,Bar Grillé + Acoompagnements,3 500,Oui,4
+18/11/2026,Plats,Poisson grillé + Accompagnement au choix,Poisson grillé + Accompagnement au choix,3 500,Oui,5
+18/11/2026,Plats,Emincé bœuf + Accompagnement au choix ,Emincé bœuf + Accompagnement au choix ,2 000,Oui,6
+18/11/2026,Accompagnements,Riz vapeus ,,0,Oui,7
+18/11/2026,Accompagnements,Plantains Frits,,0,Oui,8
+18/11/2026,Accompagnements,Plantains Vapeur,,0,Oui,9
+18/11/2026,Accompagnements,Bâtons de manioc,,0,Oui,10
+18/11/2026,Accompagnements,Pommes de terre Frits ,,0,Oui,11
+18/11/2026,Boissons,Jus detox ,,1 000,Oui,12
+18/11/2026,Boissons,Jus Gingembre,,500,Oui,13
+18/11/2026,Boissons,Jus Cocktail ,,500,Oui,14
+18/11/2026,Boissons,Jus Papaye Citron,,500,Oui,15
+18/11/2026,Boissons,Jus Goyage ,,1 000,Oui,16
+18/11/2026,Boissons,Jus Corossol,,1 000,Oui,17
+18/11/2026,Boissons,Jus d'ananas ,,500,Oui,18
+18/11/2026,Boissons,Jus Citron ,,500,Oui,19
+18/11/2026,Boissons,Jus Cassimango,,500,Oui,20
+18/11/2026,Boissons,Jus Beterave,,1 000,Oui,21
+18/11/2026,Boissons,Jus Foléré ,,500,Oui,22
+18/11/2026,Boissons,Jus Baobab,,1 000,Oui,23
+18/11/2026,Boissons,Boissons gazeuses au choix,,500,Oui,24
+18/11/2026,Petit-déjeuner,Croques Monsieur ,,1 000,Oui,25
+18/11/2026,Petit-déjeuner,Gaufres au chocolat,,1 000,Oui,26
+18/11/2026,Petit-déjeuner,Gaufres au sucre glacé,,1 000,Oui,27
+18/11/2026,Petit-déjeuner,Omelette garnie,Saedine plus pattes au choix ,1 000,Oui,28
+18/11/2026,Salades,Salade de crudité classique ,,1 500,Oui,29
+18/11/2026,Salades,Salade du chef sans fromage ,,2 000,Oui,30
+18/11/2026,Salades,Salade du chef avec fromage ,,2 500,Oui,31
